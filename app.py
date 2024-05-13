@@ -7,7 +7,7 @@ app = Flask(__name__)
 def get_hostname():
     hostname = socket.gethostname()
     endpoint = request.endpoint
-    return jsonify({"hostname": hostname, "endpoint": endpoint})
+    return jsonify({"hostname": hostname, "endpoint": endpoint, "branch": "dev"})
 
 if __name__ == '__main__':
     app.run(debug=True)
